@@ -215,7 +215,7 @@ body {
     position: relative;
     width: 500px;
     height: 500px;
-    background-image: url('/map.JPG'); /* Add the map image URL */
+    background-image: url('images/map.JPG'); /* Add the map image URL */
     background-size: 500%; /* Zoom in on the map */
     background-repeat: repeat;
     background-position: center; /* Center the background */
