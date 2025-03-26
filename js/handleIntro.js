@@ -16,7 +16,7 @@ function startGame() {
     audio.play();
     audio.volume = 0.2;
     progress = 0;
-    startDraining();
+    TrainStartDraining();
     SetHeroPosition();
 }
 
@@ -117,5 +117,5 @@ function fillProgressIntro(increment) {
 }
 
 function introProgressBarFill() {
-    fillProgressIntro(2);
+    fillProgressIntro(100);
 }

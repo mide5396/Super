@@ -50,6 +50,14 @@
                 <div class="obstacle" style="left: 50px; top: 30px;"></div>
                 <div class="obstacle" style="left: 200px; top: 70px;"></div>
             </div>
+            <div id="fightArea">
+                <div id="dinosaur"></div>
+                <div id="ground"></div>
+                <div id="obstacle"></div>
+                <div id="score">Power: <span id="power-value">0</span></div>
+            </div><div class="progress-container">
+                <div id="fight-bar" class="progress-bar"></div>
+            </div>
             <button id="fight-button" class="press-button">FIGHT</button>
         </div>
 
@@ -59,10 +67,7 @@
                 <div id="strength" class="upgrade-ui">
                     Strength: <span id="strength-value">0</span>
                 </div>
-        
-                <div id="power" class="upgrade-ui">
-                    Power: <span id="power-value">0</span>
-                </div>
+    
             </div>
 
             <div id="upgrade-container" >
@@ -84,8 +89,9 @@
     </div>
 
     <script src="js/constants.js"></script>
- 
+    <script src="js/helpers.js"></script>
     <script src="js/progress.js"></script>
+    <script src="js/fight.js"></script>
     <script src="js/upgrades.js"></script>
     <script src="js/gameLogic.js"></script>
     <script src="js/fightAnimation.js"></script>

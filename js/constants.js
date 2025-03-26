@@ -1,5 +1,9 @@
 let progress = 0;
+let fightProgress = 0;
+
 let currentStrength = 0;
+let currentPower = 0;
+
 let strengthRate = 0;
 let drainRate = 1;
 let totalDrainRate = 1;
@@ -11,11 +15,20 @@ let numberOfProgressUpgrades = 1;
 let clickUpgradeRate = 1;
 let powerUpgradeRate = 1;
 
-let powerIncrements = 5;
-let pressButton = document.getElementById("press-button")
+let fightSpeed = 5;
+let speedUpRate = 0.05;
+
+let trainIncrements = 5;
+
+let fightIncrements = 5;
+
+let trainButton = document.getElementById("press-button");
+let fightButton = document.getElementById("fight-button");
 
 const introProgressBar = document.getElementById("intro-progress-bar");
 const progressBar = document.getElementById("progress-bar");
+const fightBar = document.getElementById('fight-bar');
+
 const introPressButton = document.getElementById("intro-press-button");
 const strengthDisplay = document.getElementById("strength-value");
 const powerDisplay = document.getElementById("power-value");
@@ -31,3 +44,7 @@ const ButtonPressType = {
 };
 
 let fillInterval;
+
+const dinosaur = document.getElementById('dinosaur');
+const obstacle = document.getElementById('obstacle');
+const scoreElement = document.getElementById('score');

@@ -118,10 +118,3 @@ function update() {
 }
 // Start the animation loop
 requestAnimationFrame(update);
-
-// Button to trigger fight (optional functionality)
-const fightButton = document.getElementById('fight-button');
-fightButton.addEventListener('click', () => {
-  // Add your fight logic here
-  alert("Fight button clicked!");
-});

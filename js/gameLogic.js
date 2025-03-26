@@ -3,23 +3,23 @@ function AddStrength(strengthAdd) {
     strengthDisplay.textContent = parseFloat(currentStrength.toFixed(2));
 }
 
-function removeAllEventListeners(button) {
-    const newButton = button.cloneNode(true); // Clone the button (without event listeners)
-    button.parentNode.replaceChild(newButton, button); // Replace the old button
-    return newButton; // Return the new button if needed
+function AddPower(powerAdd)
+{
+    currentPower += powerAdd;
+    powerDisplay.textContent = parseFloat(currentPower.toFixed(2));
 }
 
 
 function HandleTrainingButtonListeners(buttonType) {
-    pressButton = removeAllEventListeners(pressButton);
+    trainButton = removeAllEventListeners(trainButton);
     switch (buttonType) {
         case ButtonPressType.HOLD:
-            pressButton.addEventListener("mousedown", BeginFilling);  // Start filling on press
-            pressButton.addEventListener("mouseup", StopFilling);     // Stop filling on release
-            pressButton.addEventListener("mouseleave", StopFilling);
+            trainButton.addEventListener("mousedown", TrainBeginFilling);  // Start filling on press
+            trainButton.addEventListener("mouseup", TrainStopFilling);     // Stop filling on release
+            trainButton.addEventListener("mouseleave", TrainStopFilling);
             break;
         case ButtonPressType.CLICK:
-            pressButton.addEventListener("click", progressBarFill)
+            trainButton.addEventListener("click", TrainProgressBarFill)
             break;
         default:
             console.warn("Unknown button type:", buttonType);

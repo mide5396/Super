@@ -34,11 +34,20 @@ function UpdateStrengthRate(updatedRate) {
 }
 
 function UpdatePowerRate(updatedRate) {
-    powerIncrements += updatedRate;
-    powerDisplay.textContent = powerIncrements;
+    powerRate += updatedRate;
+    if (powerRate > 0)
+    {
+        StartPowerTraining();
+    }
 }
 
 function RemoveStrength(strengthRemove) {
     currentStrength -= strengthRemove;
     strengthDisplay.textContent = parseFloat(currentStrength.toFixed(2));
+}
+
+function RemovePower(powerRemove)
+{
+    currentPower -= powerRemove;
+    powerDisplay.textContent = parseFloat(currentPower.toFixed(2));
 }

@@ -1,4 +1,4 @@
-function startDraining() {
+function TrainStartDraining() {
     setInterval(() => {
         if (progress > 0) {
             progress -= totalDrainRate;
@@ -12,27 +12,50 @@ function startDraining() {
     }, 100);
 }
 
-function progressBarFill() {
-    fillProgress(powerIncrements);
+function TrainProgressBarFill() {
+    TrainFillProgress(trainIncrements);
 }
 
-function fillProgress(increment) {
+function TrainFillProgress(increment) {
     progress += increment;
     if (progress >= 100) {
         progress = 0;
         UpdateProgressDrainRate();
-        AddStrength(20);
+        AddPower(1);
     }
     progressBar.style.width = progress + "%";
 }
 
-function BeginFilling() {
+function TrainBeginFilling() {
     if (!fillInterval) { // Prevent multiple intervals
-        fillInterval = setInterval(progressBarFill, 100);
+        fillInterval = setInterval(TrainProgressBarFill, 100);
     }
 }
 
-function StopFilling() {
+function TrainStopFilling() {
     clearInterval(fillInterval);
     fillInterval = null; // Reset interval ID
+}
+
+function FightProgressBarFill()
+{
+    FightFillProgress(fightIncrements);
+}
+
+function FightFillProgress(increment)
+{
+    fightProgress += increment;
+    if (fightProgress >= 100)
+    {
+        fightProgress = 0;
+        AddPower(20);
+        FightWon();
+    }
+    fightBar.style.width = fightProgress + '%';
+}
+
+function FightRemoveProgress()
+{
+    fightProgress = 0;
+    fightBar.style.width = fightProgress + '%';
 }
