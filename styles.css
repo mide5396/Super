@@ -158,6 +158,15 @@ body {
     border-radius: 5px;
 }
 
+.left-panel {
+    position: fixed; /* Or absolute, depending on your layout needs */
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    /* Optional styling */
+    padding: 20px;
+}
+
 .right-panel {
     position: fixed;  /* Keeps it fixed on screen */
     top: 0;
@@ -172,6 +181,53 @@ body {
     padding: 20px;
     box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
 }
+
+
+/* Moving white square */
+.white-square {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    top: 50%;  /* Initially center vertically */
+    left: 50%; /* Initially center horizontally */
+}
+  
+/* Obstacle squares */
+.obstacle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+
+.middle-panel {
+    position: fixed; /* Positions relative to the viewport */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the panel */
+    /* Optional styling */
+    padding: 20px;
+    text-align: center;
+}
+
+.gray-box {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-image: url('map.jpg'); /* Add the map image URL */
+    background-size: 500%; /* Zoom in on the map */
+    background-repeat: repeat;
+    background-position: center; /* Center the background */
+    overflow: hidden; 
+}
+
+.fight-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 
 #upgrade-display {
     text-align: center;

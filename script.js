@@ -31,6 +31,16 @@ const upgrades = [
     { id: 'upgrade-power', cost: 20, multiplier: 2, effect: () => UpdatePowerRate(5), costDisplayId: 'power-cost' }
 ];
 
+const ButtonType = {
+    INTRO: "intro",
+    MAIN: "main"
+};
+
+function HandleTrainingButtonListeners()
+{
+
+}
+
 introPressButton.addEventListener("click", introProgressBarFill);
 pressButton.addEventListener("click", progressBarFill)
 
@@ -107,7 +117,7 @@ function StartStrengthTraining() {
 
 
 function introProgressBarFill(){
-    fillProgressIntro(2);
+    fillProgressIntro(100);
 }
 
 function progressBarFill()
@@ -161,6 +171,8 @@ function RemoveStrength(strengthRemove)
 
 function showInvincibleScreen(){
     invincibleImage.style.display = "block";
+    audio.volume = 1;
+    audio.play();
     zoomInImage();
 }
 
@@ -170,8 +182,6 @@ function hideInvincibleScreen() {
 
 function zoomInImage() {
     const img = document.getElementById("invincibleImage");
-    audio.play();
-    
     img.style.display = "block"; // Show the image
 
     let scale = 1;
@@ -246,6 +256,7 @@ function startGame(){
     gameScreen.style.display = "block"; // Show the game screen
     audio.src = "assets/invincSong.mp3";
     audio.play();
+    audio.volume = 0.2;
     progress = 0;
     startDraining();
     introPressButton.addEventListener("click", introProgressBarFill);

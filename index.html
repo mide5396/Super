@@ -35,13 +35,24 @@
 
     <div class="game-container" id="gameScreen" style="display: none;">
 
-
+        <div class="left-panel">
         
-        <div class="progress-container">
-            <div id="progress-bar" class="progress-bar"></div>
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+    
+            <button id="press-button" class="press-button">TRAIN</button>
         </div>
 
-        <button id="press-button" class="press-button">TRAIN</button>
+        <div class="middle-panel">
+            <div class="gray-box">
+                <div class="white-square" id="white-square"></div>
+                <div class="obstacle" style="left: 50px; top: 30px;"></div>
+                <div class="obstacle" style="left: 200px; top: 70px;"></div>
+            </div>
+            <button id="fight-button" class="press-button">FIGHT</button>
+        </div>
+
         
         <div class="right-panel">
             <div id="upgrade-display">
@@ -72,6 +83,12 @@
        
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/constants.js"></script>
+ 
+    <script src="js/progress.js"></script>
+    <script src="js/upgrades.js"></script>
+    <script src="js/gameLogic.js"></script>
+    <script src="js/fightAnimation.js"></script>
+    <script src="js/handleIntro.js"></script>
 </body>
 </html>
