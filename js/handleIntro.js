@@ -117,5 +117,5 @@ function fillProgressIntro(increment) {
 }
 
 function introProgressBarFill() {
-    fillProgressIntro(100);
+    fillProgressIntro(2);
 }
