@@ -35,8 +35,19 @@
 
     <div class="game-container" id="gameScreen" style="display: none;">
 
+
         <div class="left-panel">
         
+            <div class="resource-text">
+                Energy: <span id="energy-text">0</span> / <span id="energy-cap">100</span>
+            </div>
+            <div class="resource-bar"><div id="energy-bar" class="fill"></div></div>
+
+            <div class="resource-text">Magic: <span id="magic-text">0</span> / <span id="magic-cap">100</span></div>
+            <div class="resource-bar"><div id="magic-bar" class="fill"></div></div>
+
+            <div class="resource-text">R3: <span id="r3-text">0</span> / <span id="r3-cap">100</span></div>
+            <div class="resource-bar"><div id="r3-bar" class="fill"></div></div>
             <div class="progress-container">
                 <div id="progress-bar" class="progress-bar"></div>
             </div>
@@ -70,9 +81,18 @@
     
             </div>
 
+            <h2>Attack Skills</h2>
+            <div id="attack-skills"></div>
+        
+            <h2>Defense Skills</h2>
+            <div id="defense-skills"></div>
+
             <div id="upgrade-container" >
                 <h2>Upgrades</h2>
-                
+                <button onclick="allocateResource('energy', 'basic')">Use Energy (Basic Training)</button>
+                <button onclick="allocateResource('magic', 'advanced')">Use Magic (Advanced Training)</button>
+                <button onclick="allocateResource('r3', 'wandoos')">Use R3 (Wandoos)</button>
+            
                 <div class="upgrade" id="upgrade-click">
                     <button class="upgrade-button">Upgrade Click</button>
                     <span class="cost">Cost: <span id="click-cost">10</span></span>

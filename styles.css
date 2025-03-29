@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -8,6 +8,23 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
+}
+
+.resource-text {
+    color: #fff;
+}
+
+.resource-bar {
+    width: 300px;
+    height: 20px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    margin-bottom: 10px;
+}
+.fill {
+    height: 100%;
+    width: 0%;
+    background-color: green;
 }
 
 .container {

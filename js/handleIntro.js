@@ -1,3 +1,9 @@
+if (skipintro)
+{
+    startGame();
+}
+
+
 introPressButton.addEventListener("click", introProgressBarFill);
 
 
@@ -13,9 +19,10 @@ function startGame() {
     document.getElementById("gameScreen").style.display = "block";
 
     audio.src = "assets/invincSong.mp3";
-    audio.play();
+    //audio.play();
     audio.volume = 0.2;
     progress = 0;
+    level = 0;
     TrainStartDraining();
     SetHeroPosition();
 }

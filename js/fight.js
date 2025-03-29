@@ -40,7 +40,7 @@ function FightWon()
 
 }
 
-function updateGame() {
+function updateFight() {
     if (isGameOver) return;
 
     // Move obstacle
@@ -52,7 +52,7 @@ function updateGame() {
         obstaclePosition = 800;
         gameOver();
     }
-    requestAnimationFrame(updateGame);
+    requestAnimationFrame(updateFight);
 }
 
 function gameOver() {
@@ -67,7 +67,7 @@ function StartFight()
 {
     isGameOver = false;
     currentFightSpeed = fightSpeed;
-    updateGame();
+    updateFight();
     fightButton = removeAllEventListeners(fightButton);
     fightButton.addEventListener("click", CheckClick);
 }
